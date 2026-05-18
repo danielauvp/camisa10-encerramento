@@ -136,12 +136,14 @@
             </video>
         </div>
 
-        <main id="content" class="site-main flex-grow flex items-center justify-center p-4 py-12 md:py-24 relative z-10 w-full">
+        <!-- Ajustado paddings da main para mobile (p-3 py-4) para manter na tela -->
+        <main id="content" class="site-main flex-grow flex items-center justify-center p-3 py-4 md:p-4 md:py-24 relative z-10 w-full">
             
             <div class="w-full max-w-5xl bg-white brutal-border shadow-brutal-yellow flex flex-col lg:flex-row relative z-20 overflow-hidden">
                 
-                <div class="w-full lg:w-5/12 relative bg-dark-bg h-[30vh] md:h-[40vh] lg:h-auto min-h-[300px] border-b-4 lg:border-b-0 lg:border-r-4 border-black">
-                    <div class="absolute bottom-4 right-4 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto z-30 group cursor-help">
+                <!-- Ajustada altura do carrossel no mobile (h-[22vh] e min-h-[160px]) para sobrar espaço para o texto -->
+                <div class="w-full lg:w-5/12 relative bg-dark-bg h-[22vh] min-h-[160px] md:h-[40vh] md:min-h-[300px] lg:h-auto border-b-4 lg:border-b-0 lg:border-r-4 border-black">
+                    <div class="absolute bottom-2 right-2 md:bottom-4 md:right-4 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto z-30 group cursor-help">
                         <div class="bg-neon-yellow text-black font-brutal text-xs md:text-xl px-2 py-1 md:px-3 md:py-1 brutal-border shadow-brutal-sm group-hover:bg-flag-green group-hover:text-white transition-colors">LIMITADO</div>
                         <div class="absolute right-0 bottom-full mb-2 lg:left-0 lg:top-full lg:right-auto lg:bottom-auto lg:mt-2 lg:mb-0 w-64 md:w-72 scale-0 group-hover:scale-100 transition-transform origin-bottom-right lg:origin-top-left bg-white text-black font-body text-xs md:text-sm p-3 md:p-4 brutal-border shadow-brutal z-40 pointer-events-none">
                             <strong class="font-brutal text-lg text-flag-blue uppercase block mb-1">Edição de Colecionador</strong>
@@ -174,36 +176,38 @@
                         </div>
                     </div>
 
-                    <button id="prev-btn" class="flex absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 bg-white/90 text-black w-10 h-10 lg:w-10 lg:h-10 items-center justify-center brutal-border hover:bg-neon-yellow transition-colors z-20 font-brutal text-2xl lg:text-xl shadow-brutal-sm">&lt;</button>
-                    <button id="next-btn" class="flex absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 bg-white/90 text-black w-10 h-10 lg:w-10 lg:h-10 items-center justify-center brutal-border hover:bg-neon-yellow transition-colors z-20 font-brutal text-2xl lg:text-xl shadow-brutal-sm">&gt;</button>
+                    <button id="prev-btn" class="flex absolute left-2 lg:left-4 top-1/2 -translate-y-1/2 bg-white/90 text-black w-8 h-8 lg:w-10 lg:h-10 items-center justify-center brutal-border hover:bg-neon-yellow transition-colors z-20 font-brutal text-xl shadow-brutal-sm">&lt;</button>
+                    <button id="next-btn" class="flex absolute right-2 lg:right-4 top-1/2 -translate-y-1/2 bg-white/90 text-black w-8 h-8 lg:w-10 lg:h-10 items-center justify-center brutal-border hover:bg-neon-yellow transition-colors z-20 font-brutal text-xl shadow-brutal-sm">&gt;</button>
                 </div>
 
-                <div class="w-full lg:w-7/12 p-8 sm:p-10 md:p-12 text-black flex flex-col justify-center">
+                <!-- Reduzidos os paddings internos de p-8 para p-4 no mobile -->
+                <div class="w-full lg:w-7/12 p-4 sm:p-6 md:p-12 text-black flex flex-col justify-center">
                     
-                    <h1 class="font-brutal text-6xl md:text-6xl uppercase leading-none mb-6">
-                        <span class="text-flag-green block">ÚLTIMO</span>
-                        <span class="text-flag-blue">LANCE!</span>
+                    <!-- Texto reduzido de 6xl para 4xl no mobile -->
+                    <h1 class="font-brutal text-4xl sm:text-5xl md:text-6xl uppercase leading-none mb-3 md:mb-6">
+                        <span class="text-flag-green">ÚLTIMO</span> <span class="text-flag-blue">LANCE!</span>
                     </h1>
                     
-                    <div class="border-l-4 border-flag-blue pl-4 mb-6">
-                        <p class="font-body font-bold text-gray-800 text-xl md:text-xl leading-tight">
+                    <div class="border-l-4 border-flag-blue pl-3 md:pl-4 mb-3 md:mb-6">
+                        <!-- Texto reduzido para caber melhor na tela menor -->
+                        <p class="font-body font-bold text-gray-800 text-sm md:text-xl leading-tight">
                             O período de inscrições se encerrou e as camisas através do cumprimento das missões estão esgotadas.
                         </p>
                     </div>
 
-                    <div class="flex items-center justify-between mb-4 border-b-4 border-black pb-3 mt-4">
-                        <h3 class="font-brutal text-2xl md:text-2xl text-dark-bg uppercase">AINDA QUER A SUA?</h3>
-                        <span class="font-brutal bg-neon-yellow text-black px-3 py-1.5 md:px-2 md:py-1 brutal-border shadow-brutal-sm text-base md:text-sm">AVISO</span>
+                    <div class="flex items-center mb-2 md:mb-4 border-b-[3px] md:border-b-4 border-black pb-2 md:pb-3 mt-2 md:mt-4">
+                        <h3 class="font-brutal text-lg md:text-2xl text-dark-bg uppercase">AINDA QUER A SUA?</h3>
                     </div>
 
-                    <p class="font-body text-gray-800 text-xl md:text-lg mb-8 leading-snug">
+                    <p class="font-body text-gray-800 text-xs sm:text-sm md:text-lg mb-4 md:mb-8 leading-snug">
                         Não conseguiu participar a tempo ou não atendeu aos requisitos mínimos? Fique tranquilo! <br><br>
                         Nós liberamos um <strong>lote extremamente limitado</strong> de camisetas da coleção Copa 26 para compra direta na nossa loja.
                     </p>
 
                     <div class="mt-auto">
-                        <a href="https://loja.investidorsardinha.com.br/" target="_blank" class="flex items-center justify-center w-full bg-flag-blue text-white font-brutal text-2xl md:text-2xl py-5 md:py-4 brutal-border shadow-brutal hover:bg-flag-green hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-none transition-all uppercase text-center">
-                            ACESSAR A LOJA OFICIAL <span class="ml-3">&gt;</span>
+                        <!-- Botão ligeiramente mais compacto no celular (py-3 text-lg) -->
+                        <a href="https://loja.investidorsardinha.com.br/" target="_blank" class="flex items-center justify-center w-full bg-flag-blue text-white font-brutal text-lg sm:text-xl md:text-2xl py-3 md:py-4 brutal-border shadow-brutal hover:bg-flag-green hover:translate-y-[4px] hover:translate-x-[4px] hover:shadow-none transition-all uppercase text-center">
+                            ACESSAR A LOJA <span class="ml-2 md:ml-3">&gt;</span>
                         </a>
                     </div>
 
@@ -212,9 +216,10 @@
 
         </main>
 
-        <footer class="breakout-elementor w-full bg-black !bg-black py-8 md:py-8 relative z-20 text-center border-t-[12px] border-black flex flex-col items-center justify-center mt-auto">
-            <img decoding="async" src="https://raw.githubusercontent.com/ProdutosAUVP/reviewdesign/main/olho-branco%20(2).svg" alt="AUVP" class="w-12 h-12 md:w-12 md:h-12 mb-2">
-            <p class="font-body text-base md:text-base text-gray-600 mt-2">&copy;2026 AUVP Capital. Todos os direitos reservados.</p>
+        <!-- Footer com espaçamento bem reduzido no mobile -->
+        <footer class="breakout-elementor w-full bg-black !bg-black py-4 md:py-8 relative z-20 text-center border-t-[8px] md:border-t-[12px] border-black flex flex-col items-center justify-center mt-auto">
+            <img decoding="async" src="https://raw.githubusercontent.com/ProdutosAUVP/reviewdesign/main/olho-branco%20(2).svg" alt="AUVP" class="w-8 h-8 md:w-12 md:h-12 mb-1 md:mb-2">
+            <p class="font-body text-xs md:text-base text-gray-600 mt-1 md:mt-2">&copy;2026 AUVP Capital. Todos os direitos reservados.</p>
         </footer>
 
         <script src="https://auvpcapital.com.br/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
